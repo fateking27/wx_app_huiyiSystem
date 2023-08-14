@@ -10,16 +10,16 @@
 
   <view class="menu_warp">
     <view class="menu_item">
-      <view class="iconfont icon-qrcode" style="color: red;font-size: 80rpx;"></view>
+      <view  bind:tap="scanCode" class="iconfont icon-qrcode" style="color: red;font-size: 80rpx;"></view>
       <text class="menu_text">扫码预定</text>
     </view>
     <view class="menu_item">
       <view class="iconfont icon-huiyishi" style="color: red;font-size: 80rpx;"></view>
-      <text class="menu_text">扫码预定</text>
+      <text class="menu_text">参与会议</text>
     </view>
     <view class="menu_item">
       <view bind:tap="jump_zuowei" class="iconfont icon-zuowei" style="color: red;font-size: 80rpx;"></view>
-      <text class="menu_text">扫码预定</text>
+      <text class="menu_text">预定会议室</text>
     </view>
   </view>
 

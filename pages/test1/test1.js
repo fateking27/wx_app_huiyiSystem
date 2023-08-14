@@ -8,8 +8,8 @@ Page({
   data: {
     banners: [],
     listNews: [],
-    isshowupdate: true,
-    loginUser:{},
+    isshowupdate: false,
+    loginUser: {},
   },
 
   closedialog() {
@@ -18,15 +18,15 @@ Page({
     })
   },
 
-  dosaveuser(){
+  dosaveuser() {
     let params = {
       id: this.data.loginUser.id,
       name: this.data.loginUser.name,
       headImg: this.data.loginUser.headImg,
     }
 
-    mt.updateUmsStudent(params).then(res =>{
-      if(200 == res.code){
+    mt.updateUmsStudent(params).then(res => {
+      if (200 == res.code) {
         wx.showToast({
           title: '保存成功',
         });
@@ -118,7 +118,35 @@ Page({
     })
   },
 
+  scanCode() {
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        console.log(111, res)
+        let result = res.result;
+        wx.navigateTo({
+          url: '/pages/test4/test4?result=' + result,
+        })
+      }
+    })
+  },
 
+  initpage() {
+    mt.getAllMtSwiper().then(res => {
+      this.setData({
+        banners: res.data.rows
+      })
+    })
+
+    mt.searchMtNews({}).then(res => {
+      this.setData({
+        listNews: res.data.rows
+      })
+      wx.stopPullDownRefresh();
+    })
+    console.log(this.data.banners)
+    console.log(this.data.listNews)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -180,15 +208,13 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload() {
-
-  },
-
+  onUnload() {},
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    this.initpage();
+    console.log("home页面生命周期-onPullDownRefresh")
   },
 
   /**
