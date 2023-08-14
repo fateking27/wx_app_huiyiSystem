@@ -29,7 +29,10 @@ Page({
       if(200 == res.code){
         wx.showToast({
           title: '保存成功',
-        })
+        });
+        this.data.loginUser.name = params.name;
+
+        wx.setStorageSync('LoginUser', JSON.stringify(this.data.loginUser))
       }
     })
   },
