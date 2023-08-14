@@ -31,7 +31,6 @@ Page({
           title: '保存成功',
         });
         this.data.loginUser.name = params.name;
-
         wx.setStorageSync('LoginUser', JSON.stringify(this.data.loginUser))
       }
     })
