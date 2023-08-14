@@ -1,0 +1,10 @@
+<!--pages/test2/test2.wxml-->
+<text>pages/test2/test2.wxml</text>
+<view>{{msg}}</view>
+<view wx:for="{{obj}}" wx:key="item.id" style="background-color: #b02923;">
+  <view>{{item.name}}</view>
+  <view>{{item.age}}</view>
+  <view>{{item.gender}}</view>
+</view>
+<button>点击</button>
+<mybtn></mybtn>

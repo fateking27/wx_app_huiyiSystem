@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/test1/test1",
+    "pages/test2/test2",
+    "pages/test3/test3",
+    "pages/test4/test4",
+    "pages/test5/test5"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#b02923",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/test1/test1",
+      "text": "首页",
+      "iconPath": "/images/index_A.png",
+      "selectedIconPath": "/images/index_B.png"
+    },{
+      "pagePath": "pages/test2/test2",
+      "text": "我的预定",
+      "iconPath": "/images/orders_A.png",
+      "selectedIconPath": "/images/orders_B.png"
+    },{
+      "pagePath": "pages/test3/test3",
+      "text": "我的",
+      "iconPath": "/images/personal_A.png",
+      "selectedIconPath": "/images/personal_B.png"
+    }]
+  },
+  "style": "v2",
+ 
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

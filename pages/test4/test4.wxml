@@ -1,0 +1,52 @@
+<!--pages/test4/test4.wxml-->
+<form bindsubmit="dosubmit">
+  <view class="date_warp">
+    <view class="sel_date">
+      <text>日期：</text>
+      <picker name="meetingdate" mode="date" bindchange="changedate" start="2023-08-10">
+        <view style="width: 200rpx;height:60rpx;line-height:60rpx;margin-top:5rpx;">{{meetingdate}}</view>
+      </picker>
+    </view>
+    <view class="sel_time">
+      <text>时间：</text>
+      <picker name="meetingtime" mode="selector" range="{{timerange}}" bindchange="changetime">
+        <view style="width: 200rpx;height:60rpx;line-height:60rpx;margin-top:5rpx;">{{meetingtime}}</view>
+      </picker>
+    </view>
+    <view class="iconfont icon-qrcode" style="color: white;font-size: 50rpx;margin-left:40rpx;"></view>
+  </view>
+
+  <view class="form_line">
+    <view class="line_title">类型：</view>
+    <view class="line_content">
+      <radio-group bindchange="changetype" name="meetingtype">
+        <label class="radio_label">
+          <radio value="会议室" checked="{{meetingtype == '会议室'}}" />会议室
+        </label>
+        <label class="radio_label">
+          <radio value="蜗牛会议" checked="{{meetingtype == '蜗牛会议'}}" />蜗牛会议
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class="form_line">
+    <view class="line_title">会议室：</view>
+  </view>
+  <view class="form_line">
+    <view class="line_content" style="height: auto;">
+      <view class="mybtn {{item.status == 1 ? 'btnactive' : item.status == 2 ? 'btnlock' : ''}}" wx:for="{{listbtn}}"
+        wx:key="id" bindtap="chooseroom" data-room="{{item}}">
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+  <view style="margin-top:30rpx;">
+    会议室地图：
+  </view>
+  <view style="display: flex;justify-content:center;margin-top:30rpx;">
+    <image src="/images/微信图片_20230810165151.png" style="width: 80vw;" mode="widthFix"></image>
+  </view>
+  <button form-type="submit" style="background: black;color:white;width: 80vw;margin-top:30rpx;">预定</button>
+</form>
+<view style="width:100vw;height:50rpx;"></view>

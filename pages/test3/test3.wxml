@@ -1,0 +1,21 @@
+
+<view class="content" style="position: relative;width: 750rpx;height: 100vh;background-color: rgb(214, 210, 210);">
+  <view class="userMessage" style="width: 750rpx;height: 300rpx;position: absolute;margin-top: 35rpx;background-color: #fff;display: flex;align-items: center;">
+    <view class="img" style="width: 150rpx;height: 150rpx;display: flex;justify-content: space-evenly;padding-left: 20rpx;">
+      <image src="{{userMessage.headImg}}" style="width: 150rpx;height: 150rpx;border-radius: 50%;"></image>
+    </view>
+
+    <view class="message" style="padding-left: 35rpx;">
+      <view class="ckname" ><text style="color: crimson;">姓名：</text>{{userMessage.name}}</view>
+      <view class="tel" style="padding: 40rpx 0;"><text style="color: crimson;">电话：</text>130293···548</view>
+      <view class="action" ><text style="color: crimson;">角色：</text>超级管理员</view>
+    </view>
+  </view>
+
+  <view class="list" style="background-color: #fff;flex: 3;width: 750rpx;height: 370rpx;position: absolute;top: 365rpx;display: flex;flex-wrap: wrap;">
+    <view wx:for="{{8}}" style="width: 187.5rpx;height: 50%;border: solid 1rpx rgb(214, 210, 210);box-sizing: border-box;display: flex;flex-wrap: wrap;justify-content: space-evenly;align-items: center;">
+      <view class="iconfont icon-huiyishi" style="font-size: 70rpx;"></view>
+      <view class="text">个人信息</view>
+    </view>
+  </view>
+</view>

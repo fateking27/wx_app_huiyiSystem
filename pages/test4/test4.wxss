@@ -1,0 +1,70 @@
+.date_warp {
+  width: 100vw;
+  height: 80rpx;
+  background: #b02923;
+  display: flex;
+  align-items: center;
+}
+.date_warp .sel_date {
+  width: 38vw;
+  height: 60rpx;
+  background: white;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  color: #b02923;
+}
+.date_warp .sel_time {
+  width: 38vw;
+  height: 60rpx;
+  background: white;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #b02923;
+}
+.form_line {
+  display: flex;
+  width: 100vw;
+  border-bottom: 1rpx solid #ccc;
+}
+.form_line .line_title {
+  width: 150rpx;
+  text-align: right;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.form_line .line_content {
+  flex: 1;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form_line .line_content .radio_label {
+  padding: 0rpx 20rpx;
+}
+.form_line .line_content .mybtn {
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  background: white;
+  border: 1rpx solid #ccc;
+  margin: 20rpx 20rpx;
+}
+.form_line .line_content .btnactive {
+  background: #b02923;
+  color: white;
+}
+.form_line .line_content .btnlock {
+  background: #ccc;
+  color: white;
+}

@@ -1,0 +1,3 @@
+<!--pages/test5/test5.wxml-->
+<map style="width: 100vw;height:100vh;" polyline="{{polyline}}" markers="{{markers}}" scale="{{18}}"
+  latitude="{{latitude}}" longitude="{{longitude}}"></map>
