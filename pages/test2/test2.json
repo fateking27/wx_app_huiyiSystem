@@ -1,5 +1,7 @@
 {
   "usingComponents": {
     "mybtn":"/components/mybtn/Component"
-  }
+  },
+  "navigationBarTitleText": "我的预定",
+  "navigationBarTextStyle": "white"
 }

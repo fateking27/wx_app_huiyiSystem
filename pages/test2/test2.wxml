@@ -1,10 +1,38 @@
-<!--pages/test2/test2.wxml-->
-<text>pages/test2/test2.wxml</text>
-<view>{{msg}}</view>
-<view wx:for="{{obj}}" wx:key="item.id" style="background-color: #b02923;">
-  <view>{{item.name}}</view>
-  <view>{{item.age}}</view>
-  <view>{{item.gender}}</view>
+<!-- 在小程序的wxml文件中 -->
+<view class="menu">
+  <view class="tag">
+    <view class="tag_ {{activeTag === 'tag_1' ? 'active' : ''}}" data-tag="tag_1" bindtap="switchTab">参与会议</view>
+    <view class="tag_ {{activeTag === 'tag_2' ? 'active' : ''}}" data-tag="tag_2" bindtap="switchTab">会议室</view>
+  </view>
+
+  <view class="contents">
+    <view class="meeting" style="display: {{showMeeting ? 'block' : 'none'}}">
+      <view class="label">
+        <view class="meet_msg"
+        style="">
+          <view>会议类型：主管述职会</view>
+          <view style="padding: 30rpx 0;">会议号：150-098-224</view>
+          <view>密码：150316</view>
+        </view>
+        <view class="btn">
+          <view class="btn_">接入会议</view>
+        </view>
+
+      </view>
+      <view class="label">
+        <view class="meet_msg"
+        style="">
+          <view>会议类型：主管述职会</view>
+          <view style="padding: 30rpx 0;">会议号：150-098-224</view>
+          <view>密码：150316</view>
+        </view>
+        <view class="btn">
+          <view class="btn_">接入会议</view>
+        </view>
+      </view>
+    </view>
+    <view class="room" style="display: {{showRoom ? 'block' : 'none'}}">
+      会议室
+    </view>
+  </view>
 </view>
-<button>点击</button>
-<mybtn></mybtn>

@@ -5,20 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-    msg: 'hello world!!!',
-    obj: [{
-      id: 1,
-      name: 'jack',
-      gender: '男',
-      age: 22,
-    }, 
-    {
-      id: 2,
-      name: 'alice',
-      gender: '女',
-      age: 22,
-    }]
+    showMeeting: true,
+    showRoom: false,
+    activeTag: "tag_1"
   },
+
+  // 点击事件处理函数
+  switchTab: function (e) {
+    var tag = e.target.dataset.tag;
+    // 获取被点击标签的自定义属性值
+    var className = tag; // 构建特定的类名
+
+    // 更新标签的样式和显示状态
+    this.setData({
+      activeTag: className
+    });
+
+    // 更新内容区域的显示与隐藏
+    if (tag === "tag_1") {
+      this.setData({
+        showMeeting: true,
+        showRoom: false
+      });
+    } else if (tag === "tag_2") {
+      this.setData({
+        showMeeting: false,
+        showRoom: true
+      });
+    }
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载
